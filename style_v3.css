@@ -1,0 +1,124 @@
+img {
+    max-width: 100%;
+    height: auto; 
+}
+
+@font-face {
+    font-family: "Coconat-Demi";
+    src: url("fonts/Coconat-Demi.woff") format("woff2");
+    font-size: large;
+    color: cadetblue;
+}
+
+body {
+    background-color: coral;
+    font-family: "Coconat-Demi", serif;
+    color: cadetblue;
+    font-size: 25px;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.grid-container {
+display: grid;  
+padding: 15px 30px 5px 15px;  
+gap: 15px;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+"name name name bio"
+"image-1 image-1 image-1 text-1"
+"text-2 image-2 image-2 image-2"
+"image-3 image-3 image-3 text-3";
+}
+
+
+
+.name {
+    grid-area: name;
+     position: sticky;
+    top: 0;
+}
+
+.name h1 {
+    text-align: center;
+    font-size: 50px;
+    color: darkcyan;
+    text-decoration: wavy;
+    margin: 0;
+    transition: color 0.5s ease;
+}
+
+.name h1:hover {
+color: beige;
+}
+
+.bio {
+    grid-area: bio;
+    color: beige;
+}
+
+.bio p {
+color: beige;
+font-size: 24px;
+opacity: 1;
+transition: opacity 0.3s ease;
+}
+
+.bio p:hover{
+    opacity: 0.5s;
+}
+
+.image-1 {
+    grid-area: image-1;
+}
+
+.image-1 img {
+    transition: transform 0.5s ease
+}
+
+.image-1 img:hover {
+    transform: scale(1.1);
+}
+
+.image-2 {
+    grid-area: image-2;
+}
+
+.image-2 img {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s ease;
+}
+
+.image-2 img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+.image-3 {
+    grid-area: image-3;
+}
+
+.image-3 img {
+    transition: transform 0.5s ease;
+}
+
+.image-3 img:hover {
+    transform: rotate(10deg);
+}
+
+.text-1 {
+    grid-area: text-1;
+}
+
+.text-2 {
+    grid-area: text-2;
+}
+
+.text-3 {
+    grid-area: text-3;
+}
