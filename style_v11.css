@@ -1,0 +1,229 @@
+img {
+    max-width: 100%;
+    height: auto; 
+}
+
+p, h1 {
+    margin: 0;
+}
+
+body {
+background: linear-gradient(180deg, rgba(102, 2, 60, 1) 0%, rgba(151, 155, 131, 1) 50%, rgba(102, 2, 60, 1) 100%);
+    font-family: "iowan-old-style-bt", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------------------------------------------- RASTER --------------------------------------------------- */ 
+
+/* Grid-Container */
+.grid-container {
+  display: grid;
+  padding: 40px;
+  column-gap: 80px;  /* Abstand zwischen Spalten */
+  row-gap: 40px;     /* Abstand zwischen Zeilen */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "name name nav"
+  ". about about-text"
+  "paris . ."
+  "paris-1 . sitz "
+  "paris-2 schrift sitz-1"
+  "paris-3 schrift-1 sitz-2 "
+  "paris-4 schrift-2 sitz-3 "
+  "paris-5 schrift-3 sitz-4 "
+  "paris-text schrift-4 sitz-5"
+  ". schrift-5 sitz-text"
+  ". schrift-text ."
+}
+
+/* --------------------------------------------------- ELEMENTE --------------------------------------------------- */ 
+
+
+.name {
+    grid-area: name;
+}
+
+.name h1 {
+    text-align: left;
+    font-size: 266.667px;
+    color: #979B83;
+    font-family: "iowan-old-style-bt";
+font-weight: 400;
+font-style: normal;
+line-height: 240px;
+}
+
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    gap: 60px;
+    justify-content: right;
+}
+
+.nav p {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color:#979B83; 
+}
+
+.nav-3 {
+    text-decoration: none;
+    color: inherit;
+      font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color:#979B83; 
+}
+
+
+.about {
+    grid-area: about;
+    padding-top: 100px;
+}
+
+.about p {
+    font-size: 69.3px;
+    text-align: left;
+    color:#66023C;
+    font-family: "iowan-old-style-bt";
+}
+
+
+.about-text {
+    grid-area: about-text;
+    margin-bottom: -30px;
+}
+
+.about-text p {
+    font-size: 24px;
+    text-align: left;
+     color:#66023C;
+    font-family: "iowan-old-style-bt";
+}
+
+
+.paris {
+    grid-area: paris;
+    align-self: end;
+    margin-bottom: -30px;
+
+}
+
+.paris p,
+.sitz p,
+.schrift p {
+    font-size: 69.3px;
+    grid-column: 1;
+    color: #979B83;
+}
+
+.paris-1 {
+    grid-area: paris-1;
+}
+
+.paris-2 {
+    grid-area: paris-2;
+}
+
+.paris-3 {
+    grid-area: paris-3;
+}
+
+.paris-4 {
+    grid-area: paris-4;
+}
+
+.paris-5 {
+    grid-area: paris-5;
+}
+
+.paris-text {
+    grid-area: paris-text;
+}
+
+.paris-text p {
+    font-size: 24px;
+    color: #979B83;
+}
+
+
+.sitz {
+    grid-area: sitz;
+    align-self: end;
+    margin-bottom: -30px;
+}
+
+.sitz-1 {
+    grid-area: sitz-1;
+}
+
+.sitz-2 {
+    grid-area: sitz-2;
+}
+
+.sitz-3 {
+    grid-area: sitz-3;
+}
+
+.sitz-4 {
+    grid-area: sitz-4;
+}
+
+.sitz-5 {
+    grid-area: sitz-5;
+}
+
+.sitz-text {
+grid-area: sitz-text;
+}
+
+.sitz-text p {
+    font-size: 24px;
+    color: #979B83;
+}
+
+
+.schrift {
+    grid-area: schrift;
+    align-self: end;
+    margin-bottom: -30px;
+}
+
+.schrift-1 {
+    grid-area: schrift-1;
+}
+
+.schrift-2 {
+    grid-area: schrift-2;
+}
+
+.schrift-3 {
+    grid-area: schrift-3;
+}
+
+.schrift-4 {
+    grid-area: schrift-4;
+}
+
+.schrift-5 {
+    grid-area: schrift-5;
+}
+
+.schrift-text {
+    grid-area: schrift-text;
+}
+
+.schrift-text p {
+    font-size: 24px;
+    color: #979B83;
+}
+

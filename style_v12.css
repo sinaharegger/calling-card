@@ -1,0 +1,769 @@
+img {
+    max-width: 100%;
+    height: auto; 
+}
+
+p, h1 {
+    margin: 0;
+}
+
+body {
+background: linear-gradient(180deg, rgba(102, 2, 60, 1) 0%, rgba(151, 155, 131, 1) 50%, rgba(102, 2, 60, 1) 100%);
+    font-family: "iowan-old-style-bt", sans-serif;
+font-weight: 400;
+font-style: normal;
+ overflow-x: visible;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+   overflow-x: visible;
+}
+
+/* --------------------------------------------------- RASTER --------------------------------------------------- */ 
+
+/* Grid-Container */
+.grid-container {
+  display: grid;
+  padding: 40px;
+  column-gap: 80px;  /* Abstand zwischen Spalten */
+  row-gap: 40px;     /* Abstand zwischen Zeilen */
+  overflow: visible;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "name name nav"
+  ". about about-text"
+  "paris . ."
+  "paris-1 . sitz "
+  "paris-2 schrift sitz-1"
+  "paris-3 schrift-1 sitz-2 "
+  "paris-4 schrift-2 sitz-3 "
+  "paris-5 schrift-3 sitz-4 "
+  "paris-text schrift-4 sitz-5"
+  ". schrift-5 sitz-text"
+  ". schrift-text ."
+}
+
+/* --------------------------------------------------- ELEMENTE --------------------------------------------------- */ 
+
+
+.name {
+    grid-area: name;
+    margin-top: 120px;
+    margin-bottom: 400px;
+}
+
+.name h1 {
+    text-align: left;
+    font-size: 266.667px;
+    color: #979B83;
+    font-family: "iowan-old-style-bt";
+font-weight: 400;
+font-style: normal;
+line-height: 240px;
+}
+
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    gap: 60px;
+    justify-content: right;
+}
+
+.nav p {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color:#979B83; 
+}
+
+
+#nav-1 {
+  scroll-margin-top: 710px;
+}
+
+#nav-2 {
+  scroll-margin-top: -165px;
+}
+
+
+.nav-3 {
+    text-decoration: none;
+    color: inherit;
+      font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color:#979B83; 
+}
+
+
+.about {
+    grid-area: about;
+    align-self: end;
+    margin-bottom: -30px;
+}
+
+.about p {
+    font-size: 69.3px;
+    text-align: left;
+    color:#66023C;
+    font-family: "iowan-old-style-bt";
+}
+
+
+.about-text {
+    grid-area: about-text;
+    align-self: end;
+    margin-bottom: -20px;
+    
+}
+
+.about-text p {
+    font-size: 24px;
+    text-align: left;
+     color:#66023C;
+    font-family: "iowan-old-style-bt";
+}
+
+.italic-link {
+  font-style: italic !important;
+  font-family: "iowan-old-style-bt" !important;
+  color:#979B83;
+}
+
+.paris {
+    grid-area: paris;
+    align-self: end;
+    margin-top: 200px;
+    margin-bottom: -30px;
+
+}
+
+.paris p,
+.sitz p,
+.schrift p {
+    font-size: 69.3px;
+    grid-column: 1;
+    color: #66023C;
+}
+
+.paris-1 img, .paris-2 img, .paris-3 img, .paris-4 img, .paris-5 img,
+.sitz-1 img, .sitz-2 img, .sitz-3 img, .sitz-4 img, .sitz-5 img,
+.schrift-1 img, .schrift-2 img, .schrift-3 img, .schrift-4 img, .schrift-5 img {
+    position: relative;
+    z-index: 1;
+}
+
+.paris-1 img:hover, .paris-2 img:hover, .paris-3 img:hover, .paris-4 img:hover, .paris-5 img:hover,
+.sitz-1 img:hover, .sitz-2 img:hover, .sitz-3 img:hover, .sitz-4 img:hover, .sitz-5 img:hover,
+.schrift-1 img:hover, .schrift-2 img:hover, .schrift-3 img:hover, .schrift-4 img:hover, .schrift-5 img:hover {
+    z-index: 999;
+}
+
+
+.paris-1 {
+    grid-area: paris-1;     
+}
+
+.paris-1 img {
+    transition: transform 0.3s ease;
+    transform-origin: left center;
+}
+
+.paris-1 img:hover {
+    transform: scale(2.16);
+       
+}
+
+
+.paris-2 {
+    grid-area: paris-2;
+}
+
+.paris-2 img {
+ transition: transform 0.3s ease;
+ transform-origin: left;
+}
+
+.paris-2 img:hover {
+ transform: scale(2.16);
+}
+
+
+.paris-3 {
+    grid-area: paris-3;
+}
+
+.paris-3 img {
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}   
+
+.paris-3 img:hover {
+    transform: scale(2.16);
+}
+
+
+.paris-4 {
+    grid-area: paris-4;
+}
+
+.paris-4 img {
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}   
+
+.paris-4 img:hover {
+    transform: scale(2.16);
+}
+
+
+.paris-5 {
+    grid-area: paris-5;
+}
+
+.paris-5 img {
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}   
+
+.paris-5 img:hover {
+    transform: scale(2.16);
+}
+
+
+.paris-text {
+    grid-area: paris-text;
+}
+
+.paris-text p {
+    font-size: 24px;
+    color: #979B83;
+}
+
+
+.sitz {
+    grid-area: sitz;
+    align-self: end;
+    margin-bottom: -30px;
+}
+
+
+.sitz-1 {
+    grid-area: sitz-1;
+}
+
+.sitz-1 img {
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}   
+
+.sitz-1 img:hover {
+    transform: scale(2.16);
+}
+
+
+.sitz-2 {
+    grid-area: sitz-2;
+}
+
+.sitz-2 img {
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}   
+
+.sitz-2 img:hover {
+    transform: scale(2.16);
+}
+
+
+.sitz-3 {
+    grid-area: sitz-3;
+}
+
+.sitz-3 img {
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}   
+
+.sitz-3 img:hover {
+    transform: scale(2.16);
+}
+
+
+.sitz-4 {
+    grid-area: sitz-4;
+    overflow: visible;
+}
+
+.sitz-4 img {
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}   
+
+.sitz-4 img:hover {
+    transform: scale(2.16);
+    transform-origin: right;
+}
+
+
+.sitz-5 {
+    grid-area: sitz-5;
+}
+
+.sitz-5 img {
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}   
+
+.sitz-5 img:hover {
+    transform: scale(2.16);
+}
+
+
+.sitz-text {
+grid-area: sitz-text;
+}
+
+.sitz-text p {
+    font-size: 24px;
+    color: #979B83;
+}
+
+
+.schrift {
+    grid-area: schrift;
+    align-self: end;
+    margin-bottom: -30px;
+}
+
+
+.schrift-1 {
+    grid-area: schrift-1;
+}
+
+.schrift-1 img {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}   
+
+.schrift-1 img:hover {
+    transform: scale(2.16);
+}
+
+
+.schrift-2 {
+    grid-area: schrift-2;
+}
+
+.schrift-2 img {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}   
+
+.schrift-2 img:hover {
+    transform: scale(2.16);
+}
+
+
+.schrift-3 {
+    grid-area: schrift-3;
+}
+
+.schrift-3 img {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}   
+
+.schrift-3 img:hover {
+    transform: scale(2.16);
+}
+
+
+.schrift-4 {
+    grid-area: schrift-4;
+}
+
+.sitz-4 img {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}   
+
+.schrift-4 img:hover {
+    transform: scale(2.16);
+}
+
+
+.schrift-5 {
+    grid-area: schrift-5;
+}
+
+.schrift-5 img {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}   
+
+.schrift-5 img:hover {
+    transform: scale(2.16);
+}
+
+
+.schrift-text {
+    grid-area: schrift-text;
+}
+
+.schrift-text p {
+    font-size: 24px;
+    color: #979B83;
+}
+
+.grid-container:has(.paris-1:hover) .sitz,
+.grid-container:has(.paris-1:hover) .sitz-1,
+.grid-container:has(.paris-1:hover) .sitz-2,
+.grid-container:has(.paris-1:hover) .sitz-3,
+.grid-container:has(.paris-1:hover) .sitz-4,
+.grid-container:has(.paris-1:hover) .sitz-5,
+.grid-container:has(.paris-1:hover) .sitz-text,
+.grid-container:has(.paris-1:hover) .schrift,
+.grid-container:has(.paris-1:hover) .schrift-1,
+.grid-container:has(.paris-1:hover) .schrift-2,
+.grid-container:has(.paris-1:hover) .schrift-3,
+.grid-container:has(.paris-1:hover) .schrift-4,
+.grid-container:has(.paris-1:hover) .schrift-5,
+.grid-container:has(.paris-1:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.paris-2:hover) .sitz,
+.grid-container:has(.paris-2:hover) .sitz-1,
+.grid-container:has(.paris-2:hover) .sitz-2,
+.grid-container:has(.paris-2:hover) .sitz-3,
+.grid-container:has(.paris-2:hover) .sitz-4,
+.grid-container:has(.paris-2:hover) .sitz-5,
+.grid-container:has(.paris-2:hover) .sitz-text,
+.grid-container:has(.paris-2:hover) .schrift,
+.grid-container:has(.paris-2:hover) .schrift-1,
+.grid-container:has(.paris-2:hover) .schrift-2,
+.grid-container:has(.paris-2:hover) .schrift-3,
+.grid-container:has(.paris-2:hover) .schrift-4,
+.grid-container:has(.paris-2:hover) .schrift-5, 
+.grid-container:has(.paris-1:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.paris-3:hover) .sitz,
+.grid-container:has(.paris-3:hover) .sitz-1,
+.grid-container:has(.paris-3:hover) .sitz-2,
+.grid-container:has(.paris-3:hover) .sitz-3,
+.grid-container:has(.paris-3:hover) .sitz-4,
+.grid-container:has(.paris-3:hover) .sitz-5,
+.grid-container:has(.paris-3:hover) .sitz-text,
+.grid-container:has(.paris-3:hover) .schrift,
+.grid-container:has(.paris-3:hover) .schrift-1,
+.grid-container:has(.paris-3:hover) .schrift-2,
+.grid-container:has(.paris-3:hover) .schrift-3,
+.grid-container:has(.paris-3:hover) .schrift-4,
+.grid-container:has(.paris-3:hover) .schrift-5,
+.grid-container:has(.paris-1:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.paris-4:hover) .sitz,
+.grid-container:has(.paris-4:hover) .sitz-1,
+.grid-container:has(.paris-4:hover) .sitz-2,
+.grid-container:has(.paris-4:hover) .sitz-3,
+.grid-container:has(.paris-4:hover) .sitz-4,
+.grid-container:has(.paris-4:hover) .sitz-5,
+.grid-container:has(.paris-4:hover) .sitz-text,
+.grid-container:has(.paris-4:hover) .schrift,
+.grid-container:has(.paris-4:hover) .schrift-1,
+.grid-container:has(.paris-4:hover) .schrift-2,
+.grid-container:has(.paris-4:hover) .schrift-3,
+.grid-container:has(.paris-4:hover) .schrift-4,
+.grid-container:has(.paris-4:hover) .schrift-5,
+.grid-container:has(.paris-1:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.paris-5:hover) .sitz,
+.grid-container:has(.paris-5:hover) .sitz-1,
+.grid-container:has(.paris-5:hover) .sitz-2,
+.grid-container:has(.paris-5:hover) .sitz-3,
+.grid-container:has(.paris-5:hover) .sitz-4,
+.grid-container:has(.paris-5:hover) .sitz-5,
+.grid-container:has(.paris-5:hover) .sitz-text,
+.grid-container:has(.paris-5:hover) .schrift,
+.grid-container:has(.paris-5:hover) .schrift-1,
+.grid-container:has(.paris-5:hover) .schrift-2,
+.grid-container:has(.paris-5:hover) .schrift-3,
+.grid-container:has(.paris-5:hover) .schrift-4,
+.grid-container:has(.paris-5:hover) .schrift-5,
+.grid-container:has(.paris-1:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.paris-text:hover) .sitz,
+.grid-container:has(.paris-text:hover) .sitz-1,
+.grid-container:has(.paris-text:hover) .sitz-2,
+.grid-container:has(.paris-text:hover) .sitz-3,
+.grid-container:has(.paris-text:hover) .sitz-4,
+.grid-container:has(.paris-text:hover) .sitz-5,
+.grid-container:has(.paris-text:hover) .sitz-text,
+.grid-container:has(.paris-text:hover) .schrift,
+.grid-container:has(.paris-text:hover) .schrift-1,
+.grid-container:has(.paris-text:hover) .schrift-2,
+.grid-container:has(.paris-text:hover) .schrift-3,
+.grid-container:has(.paris-text:hover) .schrift-4,
+.grid-container:has(.paris-text:hover) .schrift-5,
+.grid-container:has(.paris-text:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+
+.grid-container:has(.sitz-1:hover) .paris,
+.grid-container:has(.sitz-1:hover) .paris-1,
+.grid-container:has(.sitz-1:hover) .paris-2,
+.grid-container:has(.sitz-1:hover) .paris-3,
+.grid-container:has(.sitz-1:hover) .paris-4,
+.grid-container:has(.sitz-1:hover) .paris-5,
+.grid-container:has(.sitz-1:hover) .paris-text,
+.grid-container:has(.sitz-1:hover) .schrift,
+.grid-container:has(.sitz-1:hover) .schrift-1,
+.grid-container:has(.sitz-1:hover) .schrift-2,
+.grid-container:has(.sitz-1:hover) .schrift-3,
+.grid-container:has(.sitz-1:hover) .schrift-4,
+.grid-container:has(.sitz-1:hover) .schrift-5,
+.grid-container:has(.sitz-1:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.sitz-2:hover) .paris,
+.grid-container:has(.sitz-2:hover) .paris-1,
+.grid-container:has(.sitz-2:hover) .paris-2,
+.grid-container:has(.sitz-2:hover) .paris-3,
+.grid-container:has(.sitz-2:hover) .paris-4,
+.grid-container:has(.sitz-2:hover) .paris-5,
+.grid-container:has(.sitz-2:hover) .paris-text,
+.grid-container:has(.sitz-2:hover) .schrift,
+.grid-container:has(.sitz-2:hover) .schrift-1,
+.grid-container:has(.sitz-2:hover) .schrift-2,
+.grid-container:has(.sitz-2:hover) .schrift-3,
+.grid-container:has(.sitz-2:hover) .schrift-4,
+.grid-container:has(.sitz-2:hover) .schrift-5,
+.grid-container:has(.sitz-2:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.sitz-3:hover) .paris,
+.grid-container:has(.sitz-3:hover) .paris-1,
+.grid-container:has(.sitz-3:hover) .paris-2,
+.grid-container:has(.sitz-3:hover) .paris-3,
+.grid-container:has(.sitz-3:hover) .paris-4,
+.grid-container:has(.sitz-3:hover) .paris-5,
+.grid-container:has(.sitz-3:hover) .paris-text,
+.grid-container:has(.sitz-3:hover) .schrift,
+.grid-container:has(.sitz-3:hover) .schrift-1,
+.grid-container:has(.sitz-3:hover) .schrift-2,
+.grid-container:has(.sitz-3:hover) .schrift-3,
+.grid-container:has(.sitz-3:hover) .schrift-4,
+.grid-container:has(.sitz-3:hover) .schrift-5,
+.grid-container:has(.sitz-3:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.sitz-4:hover) .paris,
+.grid-container:has(.sitz-4:hover) .paris-1,
+.grid-container:has(.sitz-4:hover) .paris-2,
+.grid-container:has(.sitz-4:hover) .paris-3,
+.grid-container:has(.sitz-4:hover) .paris-4,
+.grid-container:has(.sitz-4:hover) .paris-5,
+.grid-container:has(.sitz-4:hover) .paris-text,
+.grid-container:has(.sitz-4:hover) .schrift,
+.grid-container:has(.sitz-4:hover) .schrift-1,
+.grid-container:has(.sitz-4:hover) .schrift-2,
+.grid-container:has(.sitz-4:hover) .schrift-3,
+.grid-container:has(.sitz-4:hover) .schrift-4,
+.grid-container:has(.sitz-4:hover) .schrift-5,
+.grid-container:has(.sitz-4:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.sitz-5:hover) .paris,
+.grid-container:has(.sitz-5:hover) .paris-1,
+.grid-container:has(.sitz-5:hover) .paris-2,
+.grid-container:has(.sitz-5:hover) .paris-3,
+.grid-container:has(.sitz-5:hover) .paris-4,
+.grid-container:has(.sitz-5:hover) .paris-5,
+.grid-container:has(.sitz-5:hover) .paris-text,
+.grid-container:has(.sitz-5:hover) .schrift,
+.grid-container:has(.sitz-5:hover) .schrift-1,
+.grid-container:has(.sitz-5:hover) .schrift-2,
+.grid-container:has(.sitz-5:hover) .schrift-3,
+.grid-container:has(.sitz-5:hover) .schrift-4,
+.grid-container:has(.sitz-5:hover) .schrift-5,
+.grid-container:has(.sitz-5:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.sitz-text:hover) .paris,
+.grid-container:has(.sitz-text:hover) .paris-1,
+.grid-container:has(.sitz-text:hover) .paris-2,
+.grid-container:has(.sitz-text:hover) .paris-3,
+.grid-container:has(.sitz-text:hover) .paris-4,
+.grid-container:has(.sitz-text:hover) .paris-5,
+.grid-container:has(.sitz-text:hover) .paris-text,
+.grid-container:has(.sitz-text:hover) .schrift,
+.grid-container:has(.sitz-text:hover) .schrift-1,
+.grid-container:has(.sitz-text:hover) .schrift-2,
+.grid-container:has(.sitz-text:hover) .schrift-3,
+.grid-container:has(.sitz-text:hover) .schrift-4,
+.grid-container:has(.sitz-text:hover) .schrift-5,
+.grid-container:has(.sitz-text:hover) .schrift-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+
+.grid-container:has(.schrift:hover) .paris,
+.grid-container:has(.schrift:hover) .paris-1,
+.grid-container:has(.schrift:hover) .paris-2,
+.grid-container:has(.schrift:hover) .paris-3,
+.grid-container:has(.schrift:hover) .paris-4,
+.grid-container:has(.schrift:hover) .paris-5,
+.grid-container:has(.schrift:hover) .paris-text,
+.grid-container:has(.schrift:hover) .sitz,
+.grid-container:has(.schrift:hover) .sitz-1,
+.grid-container:has(.schrift:hover) .sitz-2,
+.grid-container:has(.schrift:hover) .sitz-3,
+.grid-container:has(.schrift:hover) .sitz-4,
+.grid-container:has(.schrift:hover) .sitz-5,
+.grid-container:has(.schrift:hover) .sitz-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.schrift-1:hover) .paris,
+.grid-container:has(.schrift-1:hover) .paris-1,
+.grid-container:has(.schrift-1:hover) .paris-2,
+.grid-container:has(.schrift-1:hover) .paris-3,
+.grid-container:has(.schrift-1:hover) .paris-4,
+.grid-container:has(.schrift-1:hover) .paris-5,
+.grid-container:has(.schrift-1:hover) .paris-text,
+.grid-container:has(.schrift-1:hover) .sitz,
+.grid-container:has(.schrift-1:hover) .sitz-1,
+.grid-container:has(.schrift-1:hover) .sitz-2,
+.grid-container:has(.schrift-1:hover) .sitz-3,
+.grid-container:has(.schrift-1:hover) .sitz-4,
+.grid-container:has(.schrift-1:hover) .sitz-5,
+.grid-container:has(.schrift-1:hover) .sitz-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.schrift-2:hover) .paris,
+.grid-container:has(.schrift-2:hover) .paris-1,
+.grid-container:has(.schrift-2:hover) .paris-2,
+.grid-container:has(.schrift-2:hover) .paris-3,
+.grid-container:has(.schrift-2:hover) .paris-4,
+.grid-container:has(.schrift-2:hover) .paris-5,
+.grid-container:has(.schrift-2:hover) .paris-text,
+.grid-container:has(.schrift-2:hover) .sitz,
+.grid-container:has(.schrift-2:hover) .sitz-1,
+.grid-container:has(.schrift-2:hover) .sitz-2,
+.grid-container:has(.schrift-2:hover) .sitz-3,
+.grid-container:has(.schrift-2:hover) .sitz-4,
+.grid-container:has(.schrift-2:hover) .sitz-5,
+.grid-container:has(.schrift-1:hover) .sitz-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.schrift-3:hover) .paris,
+.grid-container:has(.schrift-3:hover) .paris-1,
+.grid-container:has(.schrift-3:hover) .paris-2,
+.grid-container:has(.schrift-3:hover) .paris-3,
+.grid-container:has(.schrift-3:hover) .paris-4,
+.grid-container:has(.schrift-3:hover) .paris-5,
+.grid-container:has(.schrift-3:hover) .paris-text,
+.grid-container:has(.schrift-3:hover) .sitz,
+.grid-container:has(.schrift-3:hover) .sitz-1,
+.grid-container:has(.schrift-3:hover) .sitz-2,
+.grid-container:has(.schrift-3:hover) .sitz-3,
+.grid-container:has(.schrift-3:hover) .sitz-4,
+.grid-container:has(.schrift-3:hover) .sitz-5,
+.grid-container:has(.schrift-3:hover) .sitz-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+.grid-container:has(.schrift-4:hover) .paris,
+.grid-container:has(.schrift-4:hover) .paris-1,
+.grid-container:has(.schrift-4:hover) .paris-2,
+.grid-container:has(.schrift-4:hover) .paris-3,
+.grid-container:has(.schrift-4:hover) .paris-4,
+.grid-container:has(.schrift-4:hover) .paris-5,
+.grid-container:has(.schrift-4:hover) .paris-text,
+.grid-container:has(.schrift-4:hover) .sitz,
+.grid-container:has(.schrift-4:hover) .sitz-1,
+.grid-container:has(.schrift-4:hover) .sitz-2,
+.grid-container:has(.schrift-4:hover) .sitz-3,
+.grid-container:has(.schrift-4:hover) .sitz-4,
+.grid-container:has(.schrift-4:hover) .sitz-5,
+.grid-container:has(.schrift-4:hover) .sitz-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+grid-container:has(.schrift-5:hover) .paris,
+.grid-container:has(.schrift-5:hover) .paris-1,
+.grid-container:has(.schrift-5:hover) .paris-2,
+.grid-container:has(.schrift-5:hover) .paris-3,
+.grid-container:has(.schrift-5:hover) .paris-4,
+.grid-container:has(.schrift-5:hover) .paris-5,
+.grid-container:has(.schrift-5:hover) .paris-text,
+.grid-container:has(.schrift-5:hover) .sitz,
+.grid-container:has(.schrift-5:hover) .sitz-1,
+.grid-container:has(.schrift-5:hover) .sitz-2,
+.grid-container:has(.schrift-5:hover) .sitz-3,
+.grid-container:has(.schrift-5:hover) .sitz-4,
+.grid-container:has(.schrift-5:hover) .sitz-5,
+.grid-container:has(.schrift-5:hover) .sitz-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}
+
+grid-container:has(.schrift-text:hover) .paris,
+.grid-container:has(.schrift-text:hover) .paris-1,
+.grid-container:has(.schrift-text:hover) .paris-2,
+.grid-container:has(.schrift-text:hover) .paris-3,
+.grid-container:has(.schrift-text:hover) .paris-4,
+.grid-container:has(.schrift-text:hover) .paris-5,
+.grid-container:has(.schrift-text:hover) .paris-text,
+.grid-container:has(.schrift-text:hover) .sitz,
+.grid-container:has(.schrift-text:hover) .sitz-1,
+.grid-container:has(.schrift-text:hover) .sitz-2,
+.grid-container:has(.schrift-text:hover) .sitz-3,
+.grid-container:has(.schrift-text:hover) .sitz-4,
+.grid-container:has(.schrift-text:hover) .sitz-5,
+.grid-container:has(.schrift-text:hover) .sitz-text {
+    filter: opacity(25%);
+    transition: filter 0.3s ease-in-out
+}

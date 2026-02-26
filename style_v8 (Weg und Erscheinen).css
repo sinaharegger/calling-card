@@ -12,6 +12,10 @@ font-weight: 400;
 font-style: normal;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 text {
     margin: 0;
 }
@@ -158,4 +162,23 @@ align-self: end;
 .text-Schriftobjekt{
     font-size: 24px;
     color: #979B83;
+}
+
+.text-Paris,
+.text-Sitzmöbel,
+.text-Schriftobjekt {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-Sitzmöbel-1 ~.text-Sitzmöbel {
+    opacity: 1;
+}
+
+.image-Paris-1 ~ .text-Paris {
+    opacity: 1;
+}
+
+.image-Schriftobjekt-1 ~ .text-Schriftobjekt {
+    opacity: 1px;
 }

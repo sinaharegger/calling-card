@@ -27,50 +27,92 @@ a {
 .grid-container {
   display: grid;
   padding: 37.8px;
-  gap: 37.8px;
+  column-gap: 75.8px;  /* Abstand zwischen Spalten */
+  row-gap: 37.8px;     /* Abstand zwischen Zeilen */
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
 }
 
+/* Leere Trennzeile zwischen den Serien */
+.trenner {
+  grid-column: 1 / -1;
+  height: 37.8px; /* gleich gross wie padding = doppelter Abstand total */
+}
+
+.name              { grid-row: 1; }
+.name-introduction { grid-row: 2; }  /* direkt nach name */
+.text-introduction { grid-row: 2; }
+
 /* Zeile 1: Name */
 .name { grid-column: 1 / -1; grid-row: 1; }
+
+.name-head-introduciton { grid-column: 3; grid-row: 1; }
+.name-head-Projekte { grid-column: 3; grid-row: 1; }
+.name-head-Kontakt { grid-column: 3; grid-row: 1; }
 
 /* Zeile 2: Introductions & Projekttitel */
 .name-introduction  { grid-column: 2; grid-row: 2; }
 .text-introduction  { grid-column: 3; grid-row: 2; }
 
 /* Zeile 3: Projekttitel Schriftobjekt & Sitzmöbel */
-.name-Schriftobjekt { grid-column: 2; grid-row: 3; }
-.name-Sitzmöbel     { grid-column: 3; grid-row: 3; }
+.name-Schriftobjekt { grid-column: 2; grid-row: 5; }
+.name-Sitzmöbel     { grid-column: 3; grid-row: 4; }
 .name-Paris         { grid-column: 1; grid-row: 3; }
 
 /* Paris → Spalte 1, Zeilen 3–7 */
 .image-Paris-1 { grid-column: 1; grid-row: 4; }
 .image-Paris-2 { grid-column: 1; grid-row: 5; }
-.image-Paris-3 { grid-column: 1; grid-row: 6; }
-.image-Paris-4 { grid-column: 1; grid-row: 7; }
-.image-Paris-5 { grid-column: 1; grid-row: 8; }
+.image-Paris-3 { grid-column: 1; grid-row: 7; }
+.image-Paris-4 { grid-column: 1; grid-row: 8; }
+.image-Paris-5 { grid-column: 1; grid-row: 9; }
 
 /* Schriftobjekt → Spalte 2, startet bei Zeile 5 (vis à vis Paris-3) */
 .image-Schriftobjekt-1 { grid-column: 2; grid-row: 6; }
 .image-Schriftobjekt-2 { grid-column: 2; grid-row: 7; }
-.image-Schriftobjekt-3 { grid-column: 2; grid-row: 8; }
-.image-Schriftobjekt-4 { grid-column: 2; grid-row: 9; }
-.image-Schriftobjekt-5 { grid-column: 2; grid-row: 10; }
+.image-Schriftobjekt-3 { grid-column: 2; grid-row: 9; }
+.image-Schriftobjekt-4 { grid-column: 2; grid-row: 10; }
+.image-Schriftobjekt-5 { grid-column: 2; grid-row: 11; }
 
 /* Sitzmöbel → Spalte 3, startet bei Zeile 4 (vis à vis Paris-2) */
 .image-Sitzmöbel-1 { grid-column: 3; grid-row: 5; }
 .image-Sitzmöbel-2 { grid-column: 3; grid-row: 6; }
-.image-Sitzmöbel-3 { grid-column: 3; grid-row: 7; }
-.image-Sitzmöbel-4 { grid-column: 3; grid-row: 8; }
-.image-Sitzmöbel-5 { grid-column: 3; grid-row: 9; }
+.image-Sitzmöbel-3 { grid-column: 3; grid-row: 8; }
+.image-Sitzmöbel-4 { grid-column: 3; grid-row: 9; }
+.image-Sitzmöbel-5 { grid-column: 3; grid-row: 10; }
 
 /* Texte */
-.text-Paris         { grid-column: 1; grid-row: 9; }
-.text-Schriftobjekt { grid-column: 2; grid-row: 11; }
-.text-Sitzmöbel     { grid-column: 3; grid-row: 10; }
+.text-Paris         { grid-column: 1; grid-row: 6; }
+.text-Schriftobjekt { grid-column: 2; grid-row: 8; }
+.text-Sitzmöbel     { grid-column: 3; grid-row: 7; }
+
+.name              { grid-row: 1; }
+.name-introduction { grid-row: 2; }  /* direkt nach name */
+.text-introduction { grid-row: 2; }
 
 /* --------------------------------------------------- ELEMENTE --------------------------------------------------- */ 
+
+/* Margins bei Titeln entfernen */
+.name-introduction { margin-top: 0; margin-bottom: 0; }
+.name-Paris        { margin-top: 0; margin-bottom: 0; }
+.name-Schriftobjekt { margin-top: 0; margin-bottom: 0; }
+.name-Sitzmöbel    { margin-top: 0; margin-bottom: 0; }
+.name              { margin-bottom: 0; margin-top: 0; }
+
+
+.name-head-introduciton { 
+    position: static
+}
+
+
+.name-head-projekte { 
+    position: static
+}
+
+
+.name-head-kontakt{ 
+    position: static
+}
+
 
 .name {
     position: static;
@@ -93,7 +135,6 @@ line-height: 240px;
 grid-column: 3;
 font-size: 24px;
 color: #66023C;
-align-self: end;
 }
 
 .name-introduction{
@@ -116,30 +157,30 @@ align-self: end;
 }
 
 .image-Paris-1{
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .text-Paris{
     font-size: 24px;
-    color: #979B83;
+    color:#66023C;
 }
 
 
 .name-Sitzmöbel{
     font-size: 69.3px;
     grid-column: 3;
-    color: #979B83;
+    color:#979B83;
      margin-bottom: 5px;
     margin-top: 50px;
 }
 
 .image-Sitzmöbel-1{
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .text-Sitzmöbel{
     font-size: 24px;
-    color: #979B83;
+    color:#66023C;
 }
 
 
@@ -152,10 +193,10 @@ align-self: end;
 }
 
 .image-Schriftobjekt-1{
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .text-Schriftobjekt{
     font-size: 24px;
-    color: #979B83;
+    color:#66023C;
 }
